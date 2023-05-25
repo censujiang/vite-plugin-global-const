@@ -1,5 +1,9 @@
 <script setup lang="ts">
+import {ref} from 'vue'
 import HelloWorld from './components/HelloWorld.vue'
+
+console.log(import.meta.env)
+const env = ref(import.meta.env)
 </script>
 
 <template>
@@ -11,6 +15,7 @@ import HelloWorld from './components/HelloWorld.vue'
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
+  {{ env }}
   <HelloWorld msg="Vite + Vue" />
 </template>
 

@@ -3,6 +3,9 @@
 		"target": "ESNext",
 		"module": "ESNext",
 		"moduleResolution": "node",
+    "paths": {
+      "vite":["node_modules/vite/dist/index.esm.js"]
+    },
 		"baseUrl": "./",
 		"noImplicitAny": false,
 		"rootDir": "./src",

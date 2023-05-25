@@ -1,17 +1,21 @@
-//使用这个函数挂载到vite上，可以在任何地方使用
-export function globalConst(){
+import { Plugin } from 'vite';
+
+interface Config {
+  [key: string]: any;
+}
+
+export function globalConst(config: Config): Plugin {
   return {
-    name:'vite-plugin-global-const',
-    //挂载后接收用户传入的参数
-    config(config){
-      return {
-        define:{
-          //这里的key就是用户传入的key，value就是用户传入的value
-          'process.env':{
-            ...config
-          }
-        }
+    name: 'vite-plugin-global-const',
+    config() {
+      console.log(config);
+      const define = {};
+      for (const key in config) {
+        define[`import.meta.env.${key}`] = JSON.stringify(config[key]);
       }
-    }
-  }
+      return {
+        define,
+      };
+    },
+  };
 }
