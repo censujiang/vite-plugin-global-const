@@ -1,0 +1,23 @@
+{
+	"compilerOptions": {
+		"target": "ESNext",
+		"module": "ESNext",
+		"moduleResolution": "node",
+		"baseUrl": "./",
+		"noImplicitAny": false,
+		"rootDir": "./src",
+    "outDir": "./esm",
+		"strict":false,
+    "noEmitOnError":false,
+		"declaration": true,
+		"declarationDir": "./types",
+	},
+	"include": [
+		"src//*.ts"
+	],
+	"exclude": [
+		"node_modules",
+		"/*.d.ts",
+		"/types/*.d.ts"
+	],
+}
