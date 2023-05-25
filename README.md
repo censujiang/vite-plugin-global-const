@@ -17,7 +17,7 @@ In your `vite.config.js`, you can add your global constants to the plugin option
 ```js
 // vite.config.js
 import { defineConfig } from 'vite'
-import {globalConst} from 'vite-plugin-global-const'
+import { globalConst } from 'vite-plugin-global-const'
 
 export default defineConfig({
   plugins: [
@@ -40,8 +40,9 @@ const main = import.meta.env.MAIN
 console.log(main)
 ```
 
+and you will get the following results in the browser console or terminal:
+
 ```console
-# browser console/terminal
 true
 ```
 
