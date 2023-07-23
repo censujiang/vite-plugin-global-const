@@ -8,13 +8,19 @@ export function globalConst(config: Config): Plugin {
   return {
     name: 'vite-plugin-global-const',
     config() {
-      const define = {};
-      for (const key in config) {
-        define[`import.meta.env.${key}`] = JSON.stringify(config[key]);
-      }
+      const define = defineConstCore(config);
       return {
         define,
       };
     },
   };
+}
+
+
+export function defineConstCore(config: Config) {
+  const define = {};
+  for (const key in config) {
+    define[`import.meta.env.${key}`] = JSON.stringify(config[key]);
+  }
+  return define;
 }

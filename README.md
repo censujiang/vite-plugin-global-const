@@ -46,6 +46,30 @@ and you will get the following results in the browser console or terminal:
 true
 ```
 
+## For Development Other Plugins
+
+If you are developing a plugin, you can use the global constants in your plugin code, they are injected into the `import.meta.env` object.For example:
+
+```js
+import { defineConstCore } from 'vite-plugin-global-const'
+
+export function customPlugin() {
+  return {
+    name: 'vite-plugin-custom',
+    config: () => {
+      const defineConst = defineConstCore({
+        YourConst: true
+      })
+      return {
+        define: {
+          ...defineConst
+        }
+      }
+    }
+  }
+}
+```
+
 ## LAST
 
 If you have any questions, please submit an issue, thank you for your support, and if you like this plugin, please give me a star, thank you!
