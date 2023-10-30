@@ -1,9 +1,10 @@
 {
   "name": "vite-plugin-global-const",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
   "description": "Define constants for your project to facilitate reuse of your code across multiple products",
   "main": "/esm/index.js",
+  "module": "/esm/index.js",
   "repository": "https://github.com/censujiang/vite-plugin-global-const.git",
   "homepage": "https://github.com/censujiang/vite-plugin-global-const",
   "bugs": {
