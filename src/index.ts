@@ -1,10 +1,10 @@
-import { Plugin } from 'vite';
+import { Plugin as VitePlugin } from 'vite';
 
 interface Config {
   [key: string]: any;
 }
 
-export function globalConst(config: Config): Plugin {
+export function globalConst(config: Config): VitePlugin {
   return {
     name: 'vite-plugin-global-const',
     config() {

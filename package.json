@@ -1,10 +1,18 @@
 {
   "name": "vite-plugin-global-const",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "type": "module",
   "description": "Define constants for your project to facilitate reuse of your code across multiple products",
-  "main": "/esm/index.js",
-  "module": "/esm/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "types",
   "repository": "https://github.com/censujiang/vite-plugin-global-const.git",
   "homepage": "https://github.com/censujiang/vite-plugin-global-const",
   "bugs": {
@@ -26,16 +34,16 @@
     "/esm",
     "/types"
   ],
-  "types": "types",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && unbuild",
     "demo:reload": "node ./scripts/demo-reload.js",
     "release": "node ./scripts/release.js"
   },
   "devDependencies": {
-    "@types/node": "^20.2.3",
+    "@types/node": "^20.9.0",
     "shelljs": "^0.8.5",
-    "typescript": "^5.0.4",
-    "vite": "^4.3.8"
+    "typescript": "^5.2.2",
+    "unbuild": "^2.0.0",
+    "vite": "^4.5.0"
   }
 }
