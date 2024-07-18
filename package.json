@@ -1,11 +1,11 @@
 {
   "name": "vite-plugin-global-const",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "type": "module",
   "description": "Define constants for your project to facilitate reuse of your code across multiple products",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
+      "types": "./types/index.d.ts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
     }
